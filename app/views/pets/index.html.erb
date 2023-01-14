@@ -1,0 +1,13 @@
+<h2>Bem-vind@s à adoção de pets</h2>
+
+<%= link_to 'Achou um pet?', new_pet_path %>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= link_to "#{pet.name} (#{pet.species})", pet_path(pet) %> |
+      <%= link_to 'Editar', edit_pet_path(pet) %>
+      <%= link_to 'Devorar', pet_path(pet), data: { turbo_method: :delete, turbo_confirm: "Certeza? Colocou tempero?" } %>
+    </li>
+  <% end %>
+</ul>

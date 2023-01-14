@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Pet.destroy_all
+
+Pet.create!(
+  name: 'Lion',
+  species: 'Dog',
+  color: 'Red',
+  size: 'Medium',
+  gender: 'Male',
+  found_at: DateTime.now - 1.year,
+  age: 200
+)

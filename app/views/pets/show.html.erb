@@ -1,0 +1,9 @@
+<%= link_to 'Voltar', pets_path %>
+
+<h3><%= @pet.name %>, um(a) adorável <%= @pet.species %></h3>
+<p>@ pet foi encontrad@ em <%= @pet.found_at %></p>
+<p><%= @pet.name %> é da cor <%= @pet.color %> e de tamanho <%= @pet.size %>.</p>
+
+<% if @pet.age %>
+  <p>O pet tem <%= @pet.age %> anos de vida.</p>
+<% end %>

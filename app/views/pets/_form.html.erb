@@ -1,0 +1,11 @@
+<%= simple_form_for pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+  <%= f.input :gender, collection: Pet::GENDERS %>
+  <%= f.input :size %>
+  <%= f.input :color %>
+  <%= f.input :age %>
+  <%= f.input :found_at, order: [:day, :month, :year] %>
+  <%= f.input :adopted %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
